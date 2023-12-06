@@ -27,7 +27,7 @@ jobs:
 
       - name: Run Tests
         continue-on-error: true
-        run: mvn test -DbrowserType="chrome" -DheadlessExecution="true"  -Dtest="${{registerTest/testDemo.java}}"
+        run: mvn test -DbrowserType="chrome" -DheadlessExecution="true"  -Dtest="${{registerTest/testDemo}}"
 
       # - name: Publish Report
       #   uses: dorny/test-reporter@v1
@@ -63,4 +63,4 @@ jobs:
 
       - name: Run Tests
         continue-on-error: true
-        run: mvn test -DbrowserType="firefox" -DheadlessExecution="true"  -Dtest="${{registerTest/testDemo.java}}"
+        run: mvn test -DbrowserType="firefox" -DheadlessExecution="true"  -Dtest="${{registerTest/testDemo}}"
