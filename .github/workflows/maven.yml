@@ -7,7 +7,6 @@
 # documentation.
 
 name: Java CI with Maven
-name: E2E Tests
 
 on:
   workflow_dispatch:
@@ -36,7 +35,7 @@ jobs:
 
       - name: Run Tests
         continue-on-error: true
-        run: mvn test -DbrowserType="chrome" -DheadlessExecution="true"  -Dtest="${{ github.event.inputs.testsPath }}"
+        run: mvn test -DbrowserType="chrome" -DheadlessExecution="true"  -Dtest="${{src/test/java/registerTest/testDemo.java}}"
 
       # - name: Publish Report
       #   uses: dorny/test-reporter@v1
