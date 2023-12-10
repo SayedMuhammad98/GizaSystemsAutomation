@@ -70,4 +70,4 @@ jobs:
         with:
           name: Tests Report Firefox_Windows
           path: 'target/surefire-reports/TEST-*.xml'
-          reporter: java-junit
+          reporter: java-junitava-junit
